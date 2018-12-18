@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
-
+// import builtins from 'rollup-plugin-node-builtins';
+// import globals from 'rollup-plugin-node-globals';
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
@@ -11,5 +12,9 @@ export const config: Config = {
       // uncomment the following line to disable service workers in production
       // serviceWorker: null
     }
+  ],
+  copy: [
+    { src: 'netlify.toml' },
+    { src: 'web.config' }
   ]
 };
